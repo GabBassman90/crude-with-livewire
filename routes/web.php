@@ -13,4 +13,4 @@ Route::get('/', function () {
 Route::get('/users', Users::class);
 Route::get('/create', Create::class);
 Route::get('/user/{customer}', User::class);
-Route::get('/{customer}/edit', Edit::class);
+Route::get('/{customerId}/edit', Edit::class);

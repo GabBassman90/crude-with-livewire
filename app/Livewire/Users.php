@@ -20,7 +20,7 @@ class Users extends Component
         return view('livewire.users');
     }
 
-    public function delete(customers $customer)
+    public function deleteCustomer(customers $customer)
     {
         $customer->delete();
         return $this->redirect('/users', navigate: true);

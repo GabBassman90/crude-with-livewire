@@ -30,7 +30,7 @@
                             class="bg-yellow-500 text-white px-4 py-1 rounded-md shadow hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">
                             Modifica
                         </button>
-                        <button wire:click="delete({{ $customer->id }})"
+                        <button wire:click="deleteCustomer({{ $customer->id }})"
                             class="bg-red-500 text-white px-4 py-1 rounded-md shadow hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
                             Elimina
                         </button>
@@ -39,8 +39,8 @@
 
 
 
-      
-          @endforeach
+
+                @endforeach
             </tbody>
         </table>
     </div>

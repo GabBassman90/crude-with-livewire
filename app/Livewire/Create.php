@@ -27,6 +27,6 @@ class Create extends Component
         ]);
         Customers::create($validate);
 
-        $this->reset();
+        $this->redirect('/users');
     }
 }

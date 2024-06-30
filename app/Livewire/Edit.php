@@ -11,8 +11,9 @@ class Edit extends Component
     public $name;
     public $email;
 
-    public function mount(Customers $customer)
+    public function mount($customerId)
     {
+        $customer = Customers::findOrFail($customerId);
         $this->customer = $customer;
         $this->name = $customer->name;
         $this->email = $customer->email;
