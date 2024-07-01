@@ -23,7 +23,7 @@ class TreatmentsRelationManager extends RelationManager
                     ->maxLength(255)
                     ->columnSpan('full'),
                 Forms\Components\Textarea::make('notes')
-                    ->maxLenght(65535)
+                    ->maxLength(65535)
                     ->columnSpan('full'),
                 Forms\Components\TextInput::make('price')
                     ->numeric()
@@ -38,6 +38,9 @@ class TreatmentsRelationManager extends RelationManager
             ->recordTitleAttribute('description')
             ->columns([
                 Tables\Columns\TextColumn::make('description'),
+                Tables\Columns\TextColumn::make('price')
+                    ->money('EUR')
+                    ->sortable()
             ])
             ->filters([
                 //
